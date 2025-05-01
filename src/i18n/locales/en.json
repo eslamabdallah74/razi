@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "work": "Work",
+    "contact": "Contact"
+  },
+  "header": {
+    "slogan": "Before it's too late"
+  },
+  "about": {
+    "title": "About Razi",
+    "whoWeAre": "Who We Are",
+    "description": "At Razi, we are pioneers in healthcare innovation, dedicated to saving lives through timely intervention. Founded on the principle that every moment counts in critical care, our team combines medical expertise with cutting-edge technology to develop solutions that bridge gaps in emergency response.",
+    "mission": "Our mission is embodied in our slogan 'Before it's too late' – a constant reminder of our commitment to providing tools and services that help medical professionals act decisively in life-saving situations.",
+    "values": {
+      "compassion": {
+        "title": "Compassion",
+        "description": "Every solution we create centers on improving patient outcomes with genuine care."
+      },
+      "timeliness": {
+        "title": "Timeliness",
+        "description": "We understand that in healthcare, time is of the essence and every second counts."
+      },
+      "reliability": {
+        "title": "Reliability",
+        "description": "Our solutions are rigorously tested to ensure they perform flawlessly when needed most."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "We continuously push boundaries to create life-saving technologies and methodologies."
+      }
+    }
+  }
+}
