@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Menu, X, Languages } from 'lucide-react';
 import { NavLink } from './NavLink';
 import { useTranslation } from 'react-i18next';
+import logo from '../assets/images/logo2.jpeg';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,8 +18,12 @@ const Header: React.FC = () => {
     <header className="fixed w-full h-16 bg-white shadow-md z-50">
       <div className="container mx-auto px-6 h-full flex justify-between items-center">
         <a href="#" className="flex items-center">
-          <div className="w-10 h-10 bg-razi-red rounded-full flex items-center justify-center mr-3">
-            <span className="text-white font-bold">R</span>
+          <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mr-3">
+            <img 
+              src={logo}
+              alt="Razi Logo" 
+              className="w-full h-full object-contain"
+            />
           </div>
           <div className="flex flex-col">
             <h1 className="text-2xl font-bold text-razi-blue">
@@ -31,8 +36,8 @@ const Header: React.FC = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-10">
-          <NavLink href="#home" className="mx-10">{t('nav.home')}</NavLink>
+        <nav className="hidden md:flex items-center gap-2">
+          <NavLink href="#home">{t('nav.home')}</NavLink>
           <NavLink href="#about">{t('nav.about')}</NavLink>
           <NavLink href="#services">{t('nav.services')}</NavLink>
           <NavLink href="#portfolio">{t('nav.work')}</NavLink>

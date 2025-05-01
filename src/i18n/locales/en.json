@@ -12,14 +12,14 @@
   "about": {
     "title": "About Razi",
     "whoWeAre": "Who We Are",
-    "description": "At Razi, we are pioneers in healthcare innovation, dedicated to saving lives through timely intervention. Founded on the principle that every moment counts in critical care, our team combines medical expertise with cutting-edge technology to develop solutions that bridge gaps in emergency response.",
+    "description": "We are third-year students in the Public Relations and Advertising Department at the International Higher Institute for Media at El Shorouk Academy. Our campaign aims to spread a culture of first aid awareness among youth and the broader community, stemming from our belief that every second counts. The campaign empowers people to confidently respond to emergency situations. Our slogan, 'Before it’s too late,' expresses the importance of quick intervention and providing first aid to help save lives. We aim to raise awareness by educating the public about the importance of first aid and its vital role in reducing injuries and saving lives. The campaign is also active on various social media platforms to reach and engage the largest possible Egyptian audience. This initiative is held under the patronage of Prof. Dr. Soheir Saleh, Dean of the Institute, and Prof. Dr. Elham Younes, Vice Dean, with general supervision by Assoc. Prof. Dr. Rasha Hegazy, Head of the Public Relations and Advertising Department, and academic supervision by Assoc. Prof. Dr. Hanaa Okasha, along with practical expert Islam El Foly and teaching assistant Ms. Rowan Alaa.",
     "mission": "Our mission is embodied in our slogan 'Before it's too late' – a constant reminder of our commitment to providing tools and services that help medical professionals act decisively in life-saving situations.",
     "values": {
       "compassion": {
         "title": "Compassion",
         "description": "Every solution we create centers on improving patient outcomes with genuine care."
       },
-      "timeliness": {
+      "tiACmeliness": {
         "title": "Timeliness",
         "description": "We understand that in healthcare, time is of the essence and every second counts."
       },
@@ -32,5 +32,40 @@
         "description": "We continuously push boundaries to create life-saving technologies and methodologies."
       }
     }
+  },
+  "services": {
+    "title": "Our Free Services",
+    "summary": "We are an awareness campaign focused on educating the community about first aid, emergency response, and key health topics like sunstroke. Our goal is to equip everyone with life-saving knowledge and confidence.",
+    "list": {
+      "firstAid": {
+        "title": "First Aid Education",
+        "description": "Simple, practical guidance on how to handle common emergencies like bleeding, fractures, and fainting."
+      },
+      "heat": {
+        "title": "Sunstroke & Heat Risk Awareness",
+        "description": "Tips and info to prevent and treat sunstroke and heat exhaustion, especially during summer months."
+      },
+      "choking": {
+        "title": "Choking & CPR Basics",
+        "description": "Clear steps for reacting to choking or cardiac arrest to help save lives quickly."
+      },
+      "resources": {
+        "title": "Online Resources & Infographics",
+        "description": "Accessible educational content shared on social media to reach and teach as many people as possible."
+      },
+      "events": {
+        "title": "Workshops & Public Events",
+        "description": "Free training and interactive sessions to help people practice and remember essential first aid steps."
+      },
+      "awareness": {
+        "title": "General Health Awareness",
+        "description": "Campaigns and posts that educate the public about everyday health risks, how to prevent them, and when to seek medical help."
+      }
+    },
+    "button": "Learn More About Our Campaign"
+  },
+  "workshop": {
+    "title": "Our Workshop",
+    "description": "We gained valuable knowledge and hands-on experience during our workshop. Here are some highlights and clips from the sessions where we learned, practiced, and engaged with the community."
   }
 }

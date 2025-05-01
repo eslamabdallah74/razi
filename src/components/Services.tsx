@@ -1,46 +1,66 @@
-import React from 'react';
-import { HeartPulse, Stethoscope, Satellite, BookOpen } from 'lucide-react';
+import React from 'react'
+import { useTranslation } from 'react-i18next'
+import { HeartPulse, Sun, AlertCircle, BookOpen, Users } from 'lucide-react'
 
 const Services: React.FC = () => {
+  const { t } = useTranslation()
+
+  const knowMoreAboutUs = () => {
+    window.open('https://www.facebook.com/share/16RwbcYN4V/', '_blank')
+  }
+
   const services = [
     {
       icon: <HeartPulse className="text-white" size={32} />,
-      title: "Emergency Response Systems",
-      description: "Cutting-edge technology that connects patients with emergency care providers faster than ever before, utilizing AI to prioritize and coordinate response efforts.",
-      bgClass: "bg-razi-red"
+      title: t('services.list.firstAid.title'),
+      description: t('services.list.firstAid.description'),
+      bgClass: 'bg-razi-red'
     },
     {
-      icon: <Stethoscope className="text-white" size={32} />,
-      title: "Remote Patient Monitoring",
-      description: "Advanced wearable devices and software solutions that allow healthcare providers to monitor vital signs and critical health metrics remotely in real-time.",
-      bgClass: "bg-razi-blue"
+      icon: <Sun className="text-white" size={32} />,
+      title: t('services.list.heat.title'),
+      description: t('services.list.heat.description'),
+      bgClass: 'bg-razi-blue'
     },
     {
-      icon: <Satellite className="text-white" size={32} />,
-      title: "Healthcare Data Analytics",
-      description: "Sophisticated data analysis tools that transform medical information into actionable insights, helping medical professionals make faster, more informed decisions.",
-      bgClass: "bg-razi-red"
+      icon: <AlertCircle className="text-white" size={32} />,
+      title: t('services.list.choking.title'),
+      description: t('services.list.choking.description'),
+      bgClass: 'bg-razi-red'
     },
     {
       icon: <BookOpen className="text-white" size={32} />,
-      title: "Medical Professional Training",
-      description: "Immersive simulation-based training programs that prepare healthcare providers for high-pressure emergency situations through realistic scenarios.",
-      bgClass: "bg-razi-blue"
+      title: t('services.list.resources.title'),
+      description: t('services.list.resources.description'),
+      bgClass: 'bg-razi-blue'
+    },
+    {
+      icon: <Users className="text-white" size={32} />,
+      title: t('services.list.events.title'),
+      description: t('services.list.events.description'),
+      bgClass: 'bg-razi-red'
+    },
+    {
+      icon: <HeartPulse className="text-white" size={32} />,
+      title: t('services.list.awareness.title'),
+      description: t('services.list.awareness.description'),
+      bgClass: 'bg-razi-blue'
     }
-  ];
+    
+  ]
 
   return (
     <section id="services" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-razi-blue mb-6 animate-on-scroll">Our Services</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-razi-blue mb-6 animate-on-scroll">{t('services.title')}</h2>
           <div className="w-20 h-1 bg-razi-red mx-auto mb-8 animate-on-scroll"></div>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto animate-on-scroll">
-            We provide innovative solutions to help healthcare professionals save lives and improve patient outcomes. Our services are designed with one goal in mind: to intervene before it's too late.
+            {t('services.summary')}
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div 
               key={index}
@@ -58,15 +78,15 @@ const Services: React.FC = () => {
             </div>
           ))}
         </div>
-        
+
         <div className="mt-16 text-center">
-          <button className="bg-razi-blue text-white px-8 py-3 rounded-full shadow-lg hover:bg-opacity-90 transition-all animate-on-scroll">
-            Learn More About Our Services
+          <button onClick={knowMoreAboutUs} className="bg-razi-blue text-white px-8 py-3 rounded-full shadow-lg hover:bg-opacity-90 transition-all animate-on-scroll">
+            {t('services.button')}
           </button>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Services;
+export default Services

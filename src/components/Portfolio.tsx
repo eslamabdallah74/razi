@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Portfolio: React.FC = () => {
   const [activeProject, setActiveProject] = useState(0);
-  
+  const { t } = useTranslation();
+
   const projects = [
     {
       title: "Emergency Response Network",
@@ -28,41 +30,41 @@ const Portfolio: React.FC = () => {
     <section id="portfolio" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-razi-blue mb-6 animate-on-scroll">Our Work</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-razi-blue mb-6 animate-on-scroll">
+            {t('workshop.title')}
+          </h2>
           <div className="w-20 h-1 bg-razi-red mx-auto mb-8 animate-on-scroll"></div>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto animate-on-scroll">
-            We're proud of the innovations we've developed and the lives they've helped save. 
-            Here are some of our flagship projects that showcase our commitment to timely intervention.
+            {t('workshop.description')}
           </p>
+
+
         </div>
-        
+
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Project Thumbnails */}
           <div className="w-full lg:w-1/3 flex flex-row lg:flex-col gap-4 animate-on-scroll">
             {projects.map((project, index) => (
-              <div 
-                key={index} 
-                className={`cursor-pointer transition-all duration-300 ${
-                  activeProject === index 
-                    ? 'border-l-4 border-razi-red pl-4 bg-gray-50' 
-                    : 'border-l-4 border-transparent pl-4 hover:border-razi-red hover:bg-gray-50'
-                }`}
+              <div
+                key={index}
+                className={`cursor-pointer transition-all duration-300 ${activeProject === index
+                  ? 'border-l-4 border-razi-red pl-4 bg-gray-50'
+                  : 'border-l-4 border-transparent pl-4 hover:border-razi-red hover:bg-gray-50'
+                  }`}
                 onClick={() => setActiveProject(index)}
               >
-                <h3 className={`text-xl font-bold mb-2 ${
-                  activeProject === index ? 'text-razi-red' : 'text-razi-blue'
-                }`}>
+                <h3 className={`text-xl font-bold mb-2 ${activeProject === index ? 'text-razi-red' : 'text-razi-blue'
+                  }`}>
                   {project.title}
                 </h3>
                 <div className="flex gap-2 flex-wrap">
                   {project.tags.map((tag, idx) => (
-                    <span 
+                    <span
                       key={idx}
-                      className={`text-xs px-2 py-1 rounded ${
-                        activeProject === index 
-                          ? 'bg-razi-red text-white' 
-                          : 'bg-gray-200 text-gray-700'
-                      }`}
+                      className={`text-xs px-2 py-1 rounded ${activeProject === index
+                        ? 'bg-razi-red text-white'
+                        : 'bg-gray-200 text-gray-700'
+                        }`}
                     >
                       {tag}
                     </span>
@@ -71,13 +73,13 @@ const Portfolio: React.FC = () => {
               </div>
             ))}
           </div>
-          
+
           {/* Featured Project */}
           <div className="w-full lg:w-2/3 animate-on-scroll">
             <div className="bg-gray-50 rounded-lg overflow-hidden shadow-xl">
               <div className="relative h-64 md:h-96 overflow-hidden">
-                <img 
-                  src={projects[activeProject].image} 
+                <img
+                  src={projects[activeProject].image}
                   alt={projects[activeProject].title}
                   className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-105"
                 />
