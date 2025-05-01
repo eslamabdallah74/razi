@@ -1,30 +1,61 @@
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import React, { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 const Portfolio: React.FC = () => {
-  const [activeProject, setActiveProject] = useState(0);
-  const { t } = useTranslation();
-
+  const [activeProject, setActiveProject] = useState(0)
+  const { t } = useTranslation()
   const projects = [
     {
-      title: "Emergency Response Network",
-      description: "A revolutionary system connecting ambulances, hospitals, and emergency responders through a unified platform, reducing response times by 47% in pilot regions.",
-      image: "https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      tags: ["Healthcare", "Emergency", "Technology"]
+      title: t('workshop.topics.food_poisoning.title'),
+      description: t('workshop.topics.food_poisoning.description'),
+      tags: ['Workshop']
     },
     {
-      title: "VitalTrack Wearable System",
-      description: "Award-winning wearable technology that monitors critical vital signs and automatically alerts emergency services when life-threatening changes are detected.",
-      image: "https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      tags: ["Wearable", "Healthcare", "Innovation"]
+      title: t('workshop.topics.fainting.title'),
+      description: t('workshop.topics.fainting.description'),
+      tags: ['Workshop']
     },
     {
-      title: "MedSync AI Platform",
-      description: "An artificial intelligence platform that analyzes patient data in real-time to predict potential emergencies before they occur, now implemented in over 200 hospitals worldwide.",
-      image: "https://images.pexels.com/photos/8438982/pexels-photo-8438982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      tags: ["AI", "Predictive Healthcare", "Technology"]
+      title: t('workshop.topics.choking.title'),
+      description: t('workshop.topics.choking.description'),
+      tags: ['Workshop']
+    },
+    {
+      title: t('workshop.topics.wounds.title'),
+      description: t('workshop.topics.wounds.description'),
+      tags: ['Workshop']
+    },
+    {
+      title: t('workshop.topics.dehydration.title'),
+      description: t('workshop.topics.dehydration.description'),
+      tags: ['Workshop']
+    },
+    {
+      title: t('workshop.topics.burns.title'),
+      description: t('workshop.topics.burns.description'),
+      tags: ['Workshop']
+    },
+    {
+      title: t('workshop.topics.hypoglycemia.title'),
+      description: t('workshop.topics.hypoglycemia.description'),
+      tags: ['Workshop']
+    },
+    {
+      title: t('workshop.topics.blood_pressure.title'),
+      description: t('workshop.topics.blood_pressure.description'),
+      tags: ['Workshop']
+    },
+    {
+      title: t('workshop.topics.nose_bleeding.title'),
+      description: t('workshop.topics.nose_bleeding.description'),
+      tags: ['Workshop']
+    },
+    {
+      title: t('workshop.topics.muscle_tension.title'),
+      description: t('workshop.topics.muscle_tension.description'),
+      tags: ['Workshop']
     }
-  ];
+  ]
 
   return (
     <section id="portfolio" className="py-20 bg-white">
@@ -37,34 +68,32 @@ const Portfolio: React.FC = () => {
           <p className="text-lg text-gray-700 max-w-3xl mx-auto animate-on-scroll">
             {t('workshop.description')}
           </p>
-
-
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-8">
-          {/* Project Thumbnails */}
-          <div className="w-full lg:w-1/3 flex flex-row lg:flex-col gap-4 animate-on-scroll">
+        <div className="flex flex-col items-center gap-8">
+          <div className="w-full flex flex-wrap justify-center gap-4 mb-8">
             {projects.map((project, index) => (
               <div
                 key={index}
-                className={`cursor-pointer transition-all duration-300 ${activeProject === index
-                  ? 'border-l-4 border-razi-red pl-4 bg-gray-50'
-                  : 'border-l-4 border-transparent pl-4 hover:border-razi-red hover:bg-gray-50'
-                  }`}
+                className={`cursor-pointer transition-all duration-300 ${
+                  activeProject === index
+                    ? 'bg-razi-red text-white border border-razi-red'
+                    : 'bg-gray-200 text-razi-blue border border-transparent hover:bg-razi-red hover:text-white'
+                } px-6 py-4 rounded-lg shadow-md text-center`}
                 onClick={() => setActiveProject(index)}
               >
-                <h3 className={`text-xl font-bold mb-2 ${activeProject === index ? 'text-razi-red' : 'text-razi-blue'
-                  }`}>
+                <h3 className={`text-xl font-bold ${activeProject === index ? 'text-white' : 'text-razi-blue'}`}>
                   {project.title}
                 </h3>
-                <div className="flex gap-2 flex-wrap">
+                <div className="flex gap-2 flex-wrap justify-center mt-2">
                   {project.tags.map((tag, idx) => (
                     <span
                       key={idx}
-                      className={`text-xs px-2 py-1 rounded ${activeProject === index
-                        ? 'bg-razi-red text-white'
-                        : 'bg-gray-200 text-gray-700'
-                        }`}
+                      className={`text-xs px-2 py-1 rounded ${
+                        activeProject === index
+                          ? 'bg-white text-razi-red'
+                          : 'bg-gray-300 text-gray-700'
+                      }`}
                     >
                       {tag}
                     </span>
@@ -74,34 +103,20 @@ const Portfolio: React.FC = () => {
             ))}
           </div>
 
-          {/* Featured Project */}
           <div className="w-full lg:w-2/3 animate-on-scroll">
-            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-xl">
-              <div className="relative h-64 md:h-96 overflow-hidden">
-                <img
-                  src={projects[activeProject].image}
-                  alt={projects[activeProject].title}
-                  className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
-                <div className="absolute bottom-0 left-0 p-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{projects[activeProject].title}</h3>
-                </div>
-              </div>
-              <div className="p-6">
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  {projects[activeProject].description}
-                </p>
-                <button className="bg-razi-red text-white px-6 py-2 rounded-full shadow hover:bg-opacity-90 transition-all">
-                  View Case Study
-                </button>
-              </div>
+            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-xl p-6">
+              <h3 className="text-2xl font-bold text-razi-blue mb-4">
+                {projects[activeProject].title}
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                {projects[activeProject].description}
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Portfolio;
+export default Portfolio

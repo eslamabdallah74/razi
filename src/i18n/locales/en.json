@@ -65,7 +65,49 @@
     "button": "Learn More About Our Campaign"
   },
   "workshop": {
-    "title": "Our Workshop",
-    "description": "We gained valuable knowledge and hands-on experience during our workshop. Here are some highlights and clips from the sessions where we learned, practiced, and engaged with the community."
+    "title": "Our Guide",
+    "description": "Learn how to handle common emergency cases using this practical guide.",
+    "topics": {
+      "food_poisoning": {
+        "title": "Food Poisoning",
+        "description": "First, try to make the person rest and avoid eating anything. Second, try to have them drink water slowly. Third, they shouldn't take any medication unless they consult a doctor because some medications might stop the vomiting process, which is essential for eliminating toxins from the body. But if the symptoms are severe, you need to call an ambulance."
+      },
+      "fainting": {
+        "title": "Fainting",
+        "description": "Make them lie on their back in a comfortable place and try to raise their legs a bit so the blood returns to the brain. Then, make sure they can breathe normally and wait for them to regain consciousness. If they don't wake up in two minutes or have trouble breathing, call an ambulance immediately."
+      },
+      "choking": {
+        "title": "Choking",
+        "description": "If they can cough, have them cough as hard as possible and do not hit their back. If they can't cough or breathe, stand behind them, wrap your hands around their abdomen, make a fist with one hand and place it just above the navel, hold the fist with the other hand, and push upward. Continue the motion until the food comes out. What if they lose consciousness? Lay them on the ground immediately, call an ambulance, and start CPR until the ambulance arrives."
+      },
+      "wounds": {
+        "title": "Wounds",
+        "description": "First, wash the wound with clean water without soap, and if the bleeding continues, apply a clean cloth until it stops. If the wound is deep, do not leave it uncovered; cover it with sterile gauze and preferably apply antibiotic ointment. Protect it, and if the wound is deep or large, you must visit a doctor for examination."
+      },
+      "dehydration": {
+        "title": "Dehydration",
+        "description": "You need to drink water or fluids containing salts or sugars, such as oral rehydration solutions or fresh juice. Drink slowly, not all at once. Make sure to rest in a cool place away from the sun and heat, and try applying cold compresses or wash your body with lukewarm water."
+      },
+      "burns": {
+        "title": "Burns",
+        "description": "First, you need to move out of the area where the burn occurred, whether in the street or a building. If you were burned at home, go to the faucet and put the burned area under lukewarm water for at least 10 to 15 minutes. The duration may vary depending on the burn's severity. Afterward, apply burn ointment and cover the burn area with gauze. If the burn is second-degree, avoid popping any blisters, as this may cause further injury. The most important thing is to keep the burn area moist. If the burn is third-degree, and a white or black layer appears, call an ambulance immediately."
+      },
+      "hypoglycemia": {
+        "title": "Hypoglycemia",
+        "description": "You need to drink juice or eat three dates. If someone loses consciousness, you must act quickly before they go into a coma. First, do not give them anything to drink, and the right action here is to lay them on their side and call an ambulance immediately. Once they recover, they should eat a full meal with carbohydrates and protein to prevent another drop in blood sugar. If the hypoglycemia is recurring, you need to visit a doctor to adjust your treatment."
+      },
+      "blood_pressure": {
+        "title": "Blood Pressure Disorder",
+        "description": "(In case of low blood pressure) First, make the person lie down and raise their legs. Then, give them water to drink, and if they still feel dizzy, have them eat something spicy or crunchy. (In case of high blood pressure) First, have the person sit down and rest, and avoid any stress. If they have medication for blood pressure, give it to them. Then, provide them with a calming drink like cold hibiscus or pomegranate juice. If the blood pressure is extremely high and causing a severe headache, take them to the hospital immediately."
+      },
+      "nose_bleeding": {
+        "title": "Nosebleeds",
+        "description": "Keep your head forward, not up or down. Then, try to stop the bleeding by closing one of your nostrils with tissues or gauze (gauze is better to ensure no remnants stay inside the nostrils). After that, press on your nostrils from the top with your fingers, and keep pressing for 10 to 15 minutes. Avoid stopping every few seconds to check if the bleeding continues. If you have ice, you can place it on your nose while holding the gauze or tissues for better results, or even use a cold water bottle."
+      },
+      "muscle_tension": {
+        "title": "Muscle Tension",
+        "description": "First, relax and don't move to prevent the cramp from worsening. Then, try to stretch the muscle in the opposite direction. After that, gently massage the affected area and apply heat. Once the cramp is relieved, try to move the muscle a bit. If the cramp persists for a long time despite all this, you should visit a doctor. Also, make sure to drink enough water throughout the day to prevent muscle cramps."
+      }
+    }
   }
 }
