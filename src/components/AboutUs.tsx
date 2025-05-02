@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import backgroundImage from '../assets/images/bg.png'
+import backgroundImage from '../assets/images/home.jpeg'
 
 const AboutUs: React.FC = () => {
   const { t } = useTranslation()

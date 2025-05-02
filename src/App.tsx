@@ -7,6 +7,8 @@ import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import { useScrollAnimation } from './hooks/useScrollAnimation';
 import './i18n/config';
+import Sponsors from './components/Sponsors';
+import Students from './components/Students';
 
 function App() {
   useScrollAnimation();
@@ -19,6 +21,8 @@ function App() {
         <Services />
         <Portfolio />
         <Testimonials />
+        <Sponsors />
+        <Students />
       </main>
       <Footer />
     </div>

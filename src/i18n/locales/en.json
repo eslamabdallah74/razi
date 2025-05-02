@@ -28,8 +28,8 @@
         "description": "Our solutions are rigorously tested to ensure they perform flawlessly when needed most."
       },
       "innovation": {
-        "title": "Innovation",
-        "description": "We continuously push boundaries to create life-saving technologies and methodologies."
+        "title": "Our Mission",
+        "description": "We’re dedicated to delivering impactful health education and hands-on training that empower people to act confidently in critical moments. Our work combines knowledge, compassion, and real-world skills to make communities safer and stronger."
       }
     }
   },
@@ -109,5 +109,60 @@
         "description": "First, relax and don't move to prevent the cramp from worsening. Then, try to stretch the muscle in the opposite direction. After that, gently massage the affected area and apply heat. Once the cramp is relieved, try to move the muscle a bit. If the cramp persists for a long time despite all this, you should visit a doctor. Also, make sure to drink enough water throughout the day to prevent muscle cramps."
       }
     }
+  },
+  "testimonials": [
+    {
+      "id": "awaan-misr",
+      "quote": "Razi campaign with Al-Shorouk Media to spread first aid awareness among students and community members.",
+      "author": "Awān Misr",
+      "position": "Newspaper",
+      "image": "/assets/images/newspapaer/awaan-misr.jpg"
+    },
+    {
+      "id": "sada-al-umma",
+      "quote": "Razi's awareness campaign with Al-Shorouk Media to spread first aid culture among students and the community. Video.",
+      "author": "Sada Al-Umma",
+      "position": "Newspaper",
+      "image": "/assets/images/newspapaer/sada-al-umma.jpg"
+    },
+    {
+      "id": "masr-al-balad",
+      "quote": "Razi campaign with Al-Shorouk Media to spread first aid awareness among students and community members.",
+      "author": "Masr Al-Balad Al-Akhbariya",
+      "position": "News Outlet",
+      "image": "/assets/images/newspapaer/masr-al-balad.jpg"
+    },
+    {
+      "id": "kalimatna",
+      "quote": "Razi's awareness campaign to spread first aid culture among youth and the community.",
+      "author": "Kalimatna",
+      "position": "Newspaper",
+      "image": "/assets/images/newspapaer/kalimatna.jpg"
+    },
+    {
+      "id": "asrar-al-jamal-al-arabi",
+      "quote": "Razi: Save a life before it’s too late.",
+      "author": "Asrar Al-Jamal Al-Arabi",
+      "position": "Magazine",
+      "image": "/assets/images/newspapaer/asrar-al-jamal-al-arabi.jpg"
+    },
+    {
+      "id": "al-jumhuriyya-al-jadida",
+      "quote": "Razi campaign with Al-Shorouk Media to spread first aid culture among community members.",
+      "author": "Al-Jumhuriyya Al-Jadida",
+      "position": "Newspaper",
+      "image": "/assets/images/newspapaer/al-jumhuriyya-al-jadida.jpg"
+    }
+  ],
+  "footer": {
+    "logo": "Razi",
+    "slogan": "Before it's too late",
+    "description": "Revolutionizing first aid and emergency education. We’re building awareness to save lives when seconds matter.",
+    "subscribeTitle": "Stay Updated",
+    "quote": "In healthcare, time is the most precious resource. Our mission is to help you use it wisely.",
+    "rights": "All rights reserved for Razi campaign – third year, Mass Communication, Shorouk Academy."
+  },
+  "sponsors": {
+    "title": "Our Sponsors"
   }
 }

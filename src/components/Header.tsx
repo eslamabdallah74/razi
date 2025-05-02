@@ -4,10 +4,17 @@ import { NavLink } from './NavLink';
 import { useTranslation } from 'react-i18next';
 import logo from '../assets/images/logo2.jpeg';
 
+
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
 
+  const scrollToTop = (e?: React.MouseEvent) => {
+    if (e) e.preventDefault()
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+    setIsMenuOpen(false)
+  }
+``  
   const toggleLanguage = () => {
     const newLang = i18n.language === 'en' ? 'ar' : 'en';
     i18n.changeLanguage(newLang);
@@ -19,9 +26,9 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-6 h-full flex justify-between items-center">
         <a href="#" className="flex items-center">
           <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mr-3">
-            <img 
+            <img
               src={logo}
-              alt="Razi Logo" 
+              alt="Razi Logo"
               className="w-full h-full object-contain"
             />
           </div>
@@ -37,7 +44,9 @@ const Header: React.FC = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-2">
-          <NavLink href="#home">{t('nav.home')}</NavLink>
+          <NavLink href="#" onClick={scrollToTop}>
+            {t('nav.home')}
+          </NavLink>
           <NavLink href="#about">{t('nav.about')}</NavLink>
           <NavLink href="#services">{t('nav.services')}</NavLink>
           <NavLink href="#portfolio">{t('nav.work')}</NavLink>
@@ -58,7 +67,7 @@ const Header: React.FC = () => {
           >
             <Languages size={20} className="text-razi-blue" />
           </button>
-          <button 
+          <button
             className="text-razi-blue"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
