@@ -1,43 +1,39 @@
-import React, { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
+import { motion } from 'framer-motion'
 
-const sponsorImages = [
-  'src/assets/images/sponsors/1.jpeg',
-  'src/assets/images/sponsors/2.jpeg',
-  'src/assets/images/sponsors/3.jpeg',
-  'src/assets/images/sponsors/4.jpeg',
-  'src/assets/images/sponsors/5.jpeg',
-  'src/assets/images/sponsors/6.jpeg',
-];
+import img1 from '../assets/images/sponsors/1.jpeg'
+import img2 from '../assets/images/sponsors/2.jpeg'
+import img3 from '../assets/images/sponsors/3.jpeg'
+import img4 from '../assets/images/sponsors/4.jpeg'
+import img5 from '../assets/images/sponsors/5.jpeg'
+import img6 from '../assets/images/sponsors/6.jpeg'
+
+const sponsorImages = [img1, img2, img3, img4, img5, img6]
 
 const Sponsors = () => {
-  const { t, i18n } = useTranslation();
-  const isArabic = i18n.language === 'ar';
-  const [isHovered, setIsHovered] = useState(false);
-  const [inView, setInView] = useState(false);
+  const { t, i18n } = useTranslation()
+  const isArabic = i18n.language === 'ar'
+  const [isHovered, setIsHovered] = useState(false)
+  const [inView, setInView] = useState(false)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setInView(true);
+          setInView(true)
         }
       },
       { threshold: 0.3 }
-    );
+    )
 
-    const section = document.getElementById('sponsors-section');
-    if (section) {
-      observer.observe(section);
-    }
+    const section = document.getElementById('sponsors-section')
+    if (section) observer.observe(section)
 
     return () => {
-      if (section) {
-        observer.unobserve(section);
-      }
-    };
-  }, []);
+      if (section) observer.unobserve(section)
+    }
+  }, [])
 
   return (
     <section 
@@ -61,7 +57,7 @@ const Sponsors = () => {
           transition={{ 
             duration: 0.5, 
             delay: 0.2,
-            type: "spring",
+            type: 'spring',
             stiffness: 200 
           }}
         >
@@ -87,7 +83,7 @@ const Sponsors = () => {
               <motion.div
                 key={`sponsor-${idx}`}
                 whileHover={{ y: -10, scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                transition={{ type: 'spring', stiffness: 300 }}
                 className="flex items-center justify-center"
               >
                 <motion.img
@@ -104,15 +100,13 @@ const Sponsors = () => {
               </motion.div>
             ))}
           </div>
-          
-          {/* Gradient overlays for smooth scroll effect */}
+
           <div className="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-white to-transparent z-10"></div>
           <div className="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-white to-transparent z-10"></div>
         </div>
-
       </motion.div>
     </section>
-  );
-};
+  )
+}
 
-export default Sponsors;
+export default Sponsors

@@ -1,29 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ArrowLeft, ArrowRight, Quote } from 'lucide-react'
+import en from '../i18n/locales/en.json'
+import ar from '../i18n/locales/ar.json'
 
 const Testimonials: React.FC = () => {
   const { t, i18n } = useTranslation()
   const [activeIndex, setActiveIndex] = useState(0)
-  const [testimonials, setTestimonials] = useState<any[]>([])
 
   const language = i18n.language
-
-  useEffect(() => {
-    const loadTestimonials = async () => {
-      const testimonialsData = await import(`../i18n/locales/${language}.json`)
-      setTestimonials(testimonialsData.default?.testimonials || [])
-    }
-
-    loadTestimonials()
-  }, [language])
-
+  const testimonials = language === 'ar' ? ar.testimonials : en.testimonials
   const currentTestimonials = testimonials
-
-  const toggleLanguage = () => {
-    const newLang = language === 'en' ? 'ar' : 'en'
-    i18n.changeLanguage(newLang)
-  }
 
   const god = [
     {
@@ -132,8 +119,7 @@ const Testimonials: React.FC = () => {
                         <button
                           key={index}
                           onClick={() => setActiveIndex(index)}
-                          className={`w-3 h-3 rounded-full transition-all ${index === activeIndex ? 'bg-razi-red scale-125' : 'bg-gray-300'
-                            }`}
+                          className={`w-3 h-3 rounded-full transition-all ${index === activeIndex ? 'bg-razi-red scale-125' : 'bg-gray-300'}`}
                         />
                       ))}
                     </div>
@@ -167,8 +153,7 @@ const Testimonials: React.FC = () => {
                         <button
                           key={index}
                           onClick={() => setActiveIndex(index)}
-                          className={`w-3 h-3 rounded-full transition-all ${index === activeIndex ? 'bg-razi-red scale-125' : 'bg-gray-300'
-                            }`}
+                          className={`w-3 h-3 rounded-full transition-all ${index === activeIndex ? 'bg-razi-red scale-125' : 'bg-gray-300'}`}
                         />
                       ))}
                     </div>
